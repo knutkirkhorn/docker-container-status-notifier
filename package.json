@@ -1,0 +1,37 @@
+{
+  "name": "docker-container-status-notifier",
+  "version": "1.0.0",
+  "description": "Notifier for Docker container statuses",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Knutakir/docker-container-status-notifier.git"
+  },
+  "keywords": [
+    "Docker",
+    "container",
+    "status",
+    "notifier"
+  ],
+  "author": "Knut Kirkhorn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Knutakir/docker-container-status-notifier/issues"
+  },
+  "homepage": "https://github.com/Knutakir/docker-container-status-notifier#readme",
+  "dependencies": {
+    "discord.js": "^11.5.1",
+    "dockerode": "^3.1.0",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.1"
+  }
+}
