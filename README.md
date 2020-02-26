@@ -1,4 +1,4 @@
-# docker-container-status-notifier
+# docker-container-status-notifier ![Docker Pulls](https://img.shields.io/docker/pulls/knutkirkhorn/docker-container-status-notifier) ![Docker Image Size](https://badgen.net/docker/size/knutkirkhorn/docker-container-status-notifier)
 > 🐳⏰ Notifier for Docker container statuses
 
 Notify for changes in Docker container statuses. Notify to a Discord channel using [Discord Webhooks](https://discordapp.com/developers/docs/resources/webhook).
