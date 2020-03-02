@@ -55,4 +55,4 @@ Provide these with the docker run command or store these in a `.env` file. Only 
     - Token for the Discord Webhook
 
 ## License
-MIT © [Knut Kirkhorn](LICENSE)
+MIT © [Knut Kirkhorn](https://github.com/Knutakir/docker-container-status-notifier/blob/master/LICENSE)
