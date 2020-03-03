@@ -3,6 +3,11 @@
 
 Notify for changes in Docker container statuses. Notify to a Discord channel using [Discord Webhooks](https://discordapp.com/developers/docs/resources/webhook).
 
+<div align="center">
+	<img src="media/top-image.png" alt="Container status notification example">
+	<p>See <a href="https://github.com/Knutakir/docker-container-status-notifier#Screenshots">screenshots</a> for more example images.</p>
+</div>
+
 ## Usage
 ### Within a Docker container
 It is possible to run this code inside a Docker container by passing the volume (`-v`) flag with the `run` command. This will pass the Docker daemon socket from the host to the container and enable calls to the [Docker Engine API](https://docs.docker.com/engine/api/latest). In this code the API is called using the [dockerode](https://github.com/apocas/dockerode) module by checking for updates in the stream to the [Events API](https://docs.docker.com/engine/api/v1.40/#operation/SystemEvents).
@@ -53,6 +58,13 @@ Provide these with the docker run command or store these in a `.env` file. Only 
     - ID for the Discord Webhook
 - `DISCORD_WEBHOOK_TOKEN`
     - Token for the Discord Webhook
+
+## Screenshots
+![Container created](media/container-created.png)
+![Container started](media/container-started.png)
+![Container stopped](media/container-stopped.png)
+![Container killed](media/container-killed.png)
+![Container removed](media/container-removed.png)
 
 ## License
 MIT © [Knut Kirkhorn](https://github.com/Knutakir/docker-container-status-notifier/blob/master/LICENSE)
