@@ -4,7 +4,7 @@
 Notify for changes in Docker container statuses. Notify to a Discord channel using [Discord Webhooks](https://discordapp.com/developers/docs/resources/webhook).
 
 <div align="center">
-	<img src="media/top-image.png" alt="Container status notification example">
+	<img src="https://raw.githubusercontent.com/Knutakir/docker-container-status-notifier/master/media/top-image.png" alt="Container status notification example">
 	<p>See <a href="https://github.com/Knutakir/docker-container-status-notifier#Screenshots">screenshots</a> for more example images.</p>
 </div>
 
@@ -60,11 +60,11 @@ Provide these with the docker run command or store these in a `.env` file. Only 
     - Token for the Discord Webhook
 
 ## Screenshots
-![Container created](media/container-created.png)
-![Container started](media/container-started.png)
-![Container stopped](media/container-stopped.png)
-![Container killed](media/container-killed.png)
-![Container removed](media/container-removed.png)
+![Container created](https://raw.githubusercontent.com/Knutakir/docker-container-status-notifier/master/media/container-created.png)
+![Container started](https://raw.githubusercontent.com/Knutakir/docker-container-status-notifier/master/media/container-started.png)
+![Container stopped](https://raw.githubusercontent.com/Knutakir/docker-container-status-notifier/master/media/container-stopped.png)
+![Container killed](https://raw.githubusercontent.com/Knutakir/docker-container-status-notifier/master/media/container-killed.png)
+![Container removed](https://raw.githubusercontent.com/Knutakir/docker-container-status-notifier/master/media/container-removed.png)
 
 ## License
 MIT © [Knut Kirkhorn](https://github.com/Knutakir/docker-container-status-notifier/blob/master/LICENSE)
