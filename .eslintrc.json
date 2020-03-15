@@ -17,10 +17,6 @@
             4,
             {"SwitchCase": 1}
         ],
-        "linebreak-style": [
-            "error",
-            "windows"
-        ],
         "quotes": [
             "error",
             "single"
@@ -29,6 +25,7 @@
             "error",
             "always"
         ],
+        "linebreak-style": "off",
         "no-console": "off",
         "object-curly-spacing": "off",
         "eol-last": "off",
