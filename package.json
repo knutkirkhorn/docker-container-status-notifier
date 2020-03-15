@@ -25,13 +25,13 @@
   },
   "homepage": "https://github.com/Knutakir/docker-container-status-notifier#readme",
   "dependencies": {
-    "discord.js": "^11.5.1",
+    "discord.js": "^11.6.2",
     "dockerode": "^3.1.0",
     "dotenv": "^8.2.0"
   },
   "devDependencies": {
     "eslint": "^6.8.0",
-    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-airbnb-base": "^14.1.0",
     "eslint-plugin-import": "^2.20.1"
   }
 }
