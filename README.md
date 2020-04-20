@@ -51,7 +51,7 @@ $ npm start
 ```
 
 ### Environment variables
-Provide these with the docker run command or store these in a `.env` file. Only `DISCORD_WEBHOOK_URL` or both `DISCORD_WEBHOOK_ID` and `DISCORD_WEBHOOK_TOKEN` are needed.
+Provide these with the docker run command or store these in a `.env` file. Only `DISCORD_WEBHOOK_URL` or both `DISCORD_WEBHOOK_ID` and `DISCORD_WEBHOOK_TOKEN` are required.
 
 - `DISCORD_WEBHOOK_URL`
     - URL to the Discord Webhook containing both the ID and the token
