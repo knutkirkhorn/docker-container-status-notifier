@@ -1,7 +1,8 @@
 const Docker = require('dockerode');
-const docker = new Docker();
 const Discord = require('discord.js');
 const config = require('./config');
+
+const docker = new Docker();
 const {discordWebhookUrl, discordWebhookID, discordWebhookToken} = config;
 
 // Check if either Discord Webhook URL or Discord Webhook ID and token is provided
@@ -14,7 +15,6 @@ if (!(discordWebhookUrl || (discordWebhookID !== '' && discordWebhookToken !== '
 // 'https://discordapp.com/api/webhooks/<ID_HERE>/<TOKEN_HERE>'
 // If the Webhook URL is empty get the values from the provided ID and token
 const [webhookID, webhookToken] = discordWebhookUrl ? discordWebhookUrl.split('/').splice(5, 2) : [discordWebhookID, discordWebhookToken];
-
 const discordHookClient = new Discord.WebhookClient(webhookID, webhookToken);
 
 const embedChatColors = {
