@@ -54,7 +54,7 @@ async function sendMessage(dockerUpdate) {
             return;
     }
 
-    await webhookClient.send(embedMessage);
+    await webhookClient.send({embeds: [embedMessage]});
 }
 
 // Get event stream for Docker
