@@ -1,21 +1,16 @@
-const Docker = require('dockerode');
-const Discord = require('discord.js');
-const config = require('./config');
+import {MessageEmbed, WebhookClient} from 'discord.js';
+import Docker from 'dockerode';
+import config from './config.js';
 
 const docker = new Docker();
-const {discordWebhookUrl, discordWebhookID, discordWebhookToken} = config;
+const {discordWebhookUrl, discordWebhookId, discordWebhookToken} = config;
 
 // Check if either Discord Webhook URL or Discord Webhook ID and token is provided
-if (!(discordWebhookUrl || (discordWebhookID !== '' && discordWebhookToken !== ''))) {
+if (!(discordWebhookUrl || (discordWebhookId !== '' && discordWebhookToken !== ''))) {
     throw new Error('You need to specify either Discord Webhook URL or both Discord Webhook ID and token!');
 }
 
-// Retrieve the ID and token from the Webhook URL
-// This is from the Discord Webhook URL format:
-// 'https://discordapp.com/api/webhooks/<ID_HERE>/<TOKEN_HERE>'
-// If the Webhook URL is empty get the values from the provided ID and token
-const [webhookID, webhookToken] = discordWebhookUrl ? discordWebhookUrl.split('/').splice(5, 2) : [discordWebhookID, discordWebhookToken];
-const discordHookClient = new Discord.WebhookClient(webhookID, webhookToken);
+const webhookClient = discordWebhookUrl ? new WebhookClient({url: discordWebhookUrl}) : new WebhookClient({id: discordWebhookId, token: discordWebhookToken});
 
 const embedChatColors = {
     error: '#ea5440',
@@ -24,9 +19,9 @@ const embedChatColors = {
 };
 
 // Send a message to the Dicord Webhook with information about the container
-function sendMessage(dockerUpdate) {
+async function sendMessage(dockerUpdate) {
     // Create a rich embed message to send
-    const richEmbedMessage = new Discord.RichEmbed()
+    const embedMessage = new MessageEmbed()
         .setTitle('📦 **Container Status** 📦')
         .addField('ID', `\`${dockerUpdate.Actor.ID}\``)
         .addField('Name', `\`${dockerUpdate.Actor.Attributes.name}\``)
@@ -35,23 +30,23 @@ function sendMessage(dockerUpdate) {
     // Set the description of the message depending on the Docker container status
     switch (dockerUpdate.status) {
         case 'create':
-            richEmbedMessage.setColor(embedChatColors.ok)
+            embedMessage.setColor(embedChatColors.ok)
                 .setDescription('🔨 Container created');
             break;
         case 'start':
-            richEmbedMessage.setColor(embedChatColors.ok)
+            embedMessage.setColor(embedChatColors.ok)
                 .setDescription('🏁 Container started');
             break;
         case 'stop':
-            richEmbedMessage.setColor(embedChatColors.warning)
+            embedMessage.setColor(embedChatColors.warning)
                 .setDescription('✋ Container stopped');
             break;
         case 'die':
-            richEmbedMessage.setColor(embedChatColors.error)
+            embedMessage.setColor(embedChatColors.error)
                 .setDescription(`💀 Container was killed with exit code \`${dockerUpdate.Actor.Attributes.exitCode}\``);
             break;
         case 'destroy':
-            richEmbedMessage.setColor(embedChatColors.error)
+            embedMessage.setColor(embedChatColors.error)
                 .setDescription('🗑️ Container removed');
             break;
         default:
@@ -59,7 +54,7 @@ function sendMessage(dockerUpdate) {
             return;
     }
 
-    discordHookClient.send(richEmbedMessage);
+    await webhookClient.send(embedMessage);
 }
 
 // Get event stream for Docker
@@ -70,12 +65,12 @@ docker.getEvents((error, readableStream) => {
     }
 
     // Listen for new data
-    readableStream.on('data', chunk => {
+    readableStream.on('data', async chunk => {
         const dockerUpdate = JSON.parse(chunk);
 
         // Check if the update is for a container
         if (dockerUpdate.Type === 'container') {
-            sendMessage(dockerUpdate);
+            await sendMessage(dockerUpdate);
         }
     });
 });

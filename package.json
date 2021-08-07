@@ -13,25 +13,30 @@
     "url": "git+https://github.com/Knutakir/docker-container-status-notifier.git"
   },
   "keywords": [
-    "Docker",
+    "docker",
     "container",
     "status",
-    "notifier"
+    "notifier",
+    "discord"
   ],
   "author": "Knut Kirkhorn",
+  "type": "module",
+  "engines": {
+    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Knutakir/docker-container-status-notifier/issues"
   },
   "homepage": "https://github.com/Knutakir/docker-container-status-notifier#readme",
   "dependencies": {
-    "discord.js": "^11.6.2",
-    "dockerode": "^3.1.0",
-    "dotenv": "^8.2.0"
+    "discord.js": "^13.0.1",
+    "dockerode": "^3.3.0",
+    "dotenv": "^10.0.0"
   },
   "devDependencies": {
-    "eslint": "^7.21.0",
+    "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.22.1"
+    "eslint-plugin-import": "^2.23.4"
   }
 }

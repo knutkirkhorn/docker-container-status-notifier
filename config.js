@@ -1,10 +1,10 @@
-const dotenv = require('dotenv');
+import dotenv from 'dotenv';
 
 // Load the stored variables from `.env` file into process.env
 dotenv.config();
 
-module.exports = {
+export default {
     discordWebhookUrl: process.env.DISCORD_WEBHOOK_URL || '',
-    discordWebhookID: process.env.DISCORD_WEBHOOK_ID || '',
+    discordWebhookId: process.env.DISCORD_WEBHOOK_ID || '',
     discordWebhookToken: process.env.DISCORD_WEBHOOK_TOKEN || ''
 };
