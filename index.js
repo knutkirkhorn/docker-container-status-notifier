@@ -20,7 +20,7 @@ const embedChatColors = {
 
 // Send a message to the Dicord Webhook with information about the container
 async function sendMessage(dockerUpdate) {
-    // Create a rich embed message to send
+    // Create a embed message to send
     const embedMessage = new MessageEmbed()
         .setTitle('📦 **Container Status** 📦')
         .addField('ID', `\`${dockerUpdate.Actor.ID}\``)
