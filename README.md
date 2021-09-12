@@ -1,13 +1,13 @@
 # docker-container-status-notifier
 > 🐳⏰ Notifier for Docker container statuses
 
-[![Docker Pulls](https://img.shields.io/docker/pulls/knutkirkhorn/docker-container-status-notifier)](https://hub.docker.com/r/knutkirkhorn/docker-container-status-notifier) [![Docker Image Size](https://badgen.net/docker/size/knutkirkhorn/docker-container-status-notifier)](https://hub.docker.com/r/knutkirkhorn/docker-container-status-notifier) [![Build Status](https://travis-ci.org/Knutakir/docker-container-status-notifier.svg?branch=main)](https://travis-ci.org/Knutakir/docker-container-status-notifier)
+[![Docker Pulls](https://img.shields.io/docker/pulls/knutkirkhorn/docker-container-status-notifier)](https://hub.docker.com/r/knutkirkhorn/docker-container-status-notifier) [![Docker Image Size](https://badgen.net/docker/size/knutkirkhorn/docker-container-status-notifier)](https://hub.docker.com/r/knutkirkhorn/docker-container-status-notifier) [![Build Status](https://travis-ci.org/knutkirkhorn/docker-container-status-notifier.svg?branch=main)](https://travis-ci.org/knutkirkhorn/docker-container-status-notifier)
 
 Notify for changes in Docker container statuses. Notify to a Discord channel using [Discord Webhooks](https://discordapp.com/developers/docs/resources/webhook).
 
 <div align="center">
-	<img src="https://raw.githubusercontent.com/Knutakir/docker-container-status-notifier/main/media/top-image.png" alt="Container status notification example">
-	<p>See <a href="https://github.com/Knutakir/docker-container-status-notifier#Screenshots">screenshots</a> for more example images.</p>
+	<img src="https://raw.githubusercontent.com/knutkirkhorn/docker-container-status-notifier/main/media/top-image.png" alt="Container status notification example">
+	<p>See <a href="https://github.com/knutkirkhorn/docker-container-status-notifier#Screenshots">screenshots</a> for more example images.</p>
 </div>
 
 ## Usage
@@ -62,11 +62,11 @@ Provide these with the docker run command or store these in a `.env` file. Only 
     - Token for the Discord Webhook
 
 ## Screenshots
-![Container created](https://raw.githubusercontent.com/Knutakir/docker-container-status-notifier/main/media/container-created.png)
-![Container started](https://raw.githubusercontent.com/Knutakir/docker-container-status-notifier/main/media/container-started.png)
-![Container stopped](https://raw.githubusercontent.com/Knutakir/docker-container-status-notifier/main/media/container-stopped.png)
-![Container killed](https://raw.githubusercontent.com/Knutakir/docker-container-status-notifier/main/media/container-killed.png)
-![Container removed](https://raw.githubusercontent.com/Knutakir/docker-container-status-notifier/main/media/container-removed.png)
+![Container created](https://raw.githubusercontent.com/knutkirkhorn/docker-container-status-notifier/main/media/container-created.png)
+![Container started](https://raw.githubusercontent.com/knutkirkhorn/docker-container-status-notifier/main/media/container-started.png)
+![Container stopped](https://raw.githubusercontent.com/knutkirkhorn/docker-container-status-notifier/main/media/container-stopped.png)
+![Container killed](https://raw.githubusercontent.com/knutkirkhorn/docker-container-status-notifier/main/media/container-killed.png)
+![Container removed](https://raw.githubusercontent.com/knutkirkhorn/docker-container-status-notifier/main/media/container-removed.png)
 
 ## License
-MIT © [Knut Kirkhorn](https://github.com/Knutakir/docker-container-status-notifier/blob/main/LICENSE)
+MIT © [Knut Kirkhorn](https://github.com/knutkirkhorn/docker-container-status-notifier/blob/main/LICENSE)

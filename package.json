@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Knutakir/docker-container-status-notifier.git"
+    "url": "git+https://github.com/knutkirkhorn/docker-container-status-notifier.git"
   },
   "keywords": [
     "docker",
@@ -26,9 +26,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Knutakir/docker-container-status-notifier/issues"
+    "url": "https://github.com/knutkirkhorn/docker-container-status-notifier/issues"
   },
-  "homepage": "https://github.com/Knutakir/docker-container-status-notifier#readme",
+  "homepage": "https://github.com/knutkirkhorn/docker-container-status-notifier#readme",
   "dependencies": {
     "discord.js": "^13.0.1",
     "dockerode": "^3.3.0",
