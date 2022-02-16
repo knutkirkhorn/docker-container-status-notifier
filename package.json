@@ -1,6 +1,7 @@
 {
   "name": "docker-container-status-notifier",
   "version": "1.0.0",
+  "private": true,
   "description": "Notifier for Docker container statuses",
   "main": "index.js",
   "scripts": {
