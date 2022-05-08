@@ -18,7 +18,7 @@ const embedChatColors = {
     ok: '#64e851'
 };
 
-// Send a message to the Dicord Webhook with information about the container
+// Send a message to the Discord Webhook with information about the container
 async function sendMessage(dockerUpdate) {
     // Create a embed message to send
     const embedMessage = new MessageEmbed()
