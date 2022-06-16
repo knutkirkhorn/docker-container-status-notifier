@@ -31,6 +31,7 @@
   },
   "homepage": "https://github.com/knutkirkhorn/docker-container-status-notifier#readme",
   "dependencies": {
+    "discord-webhook-wrapper": "^1.0.0",
     "discord.js": "^13.6.0",
     "dockerode": "^3.3.1",
     "dotenv": "^16.0.0"
