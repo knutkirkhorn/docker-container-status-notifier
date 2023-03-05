@@ -23,12 +23,12 @@ This will pull the image from [Docker Hub](https://hub.docker.com/) and run the 
 
 ```sh
 # Providing Discord Webhook URL
-$ docker run -d -v /var/run/docker.sock:/var/run/docker.sock \
+docker run -d -v /var/run/docker.sock:/var/run/docker.sock \
     -e DISCORD_WEBHOOK_URL=<URL_HERE> \
     knutkirkhorn/docker-container-status-notifier
 
 # Providing both Discord Webhook ID and token
-$ docker run -d -v /var/run/docker.sock:/var/run/docker.sock \
+docker run -d -v /var/run/docker.sock:/var/run/docker.sock \
     -e DISCORD_WEBHOOK_ID=<ID_HERE> \
     -e DISCORD_WEBHOOK_TOKEN=<TOKEN_HERE> \
     knutkirkhorn/docker-container-status-notifier
@@ -38,10 +38,10 @@ $ docker run -d -v /var/run/docker.sock:/var/run/docker.sock \
 
 ```sh
 # Build container from source
-$ docker build -t docker-container-status-notifier .
+docker build -t docker-container-status-notifier .
 
 # Run the built container
-$ docker run -d -v /var/run/docker.sock:/var/run/docker.sock \
+docker run -d -v /var/run/docker.sock:/var/run/docker.sock \
     -e DISCORD_WEBHOOK_URL=<URL_HERE> \
     docker-container-status-notifier
 ```
@@ -50,10 +50,10 @@ $ docker run -d -v /var/run/docker.sock:/var/run/docker.sock \
 
 ```sh
 # Install
-$ npm install
+npm install
 
 # Run
-$ npm start
+npm start
 ```
 
 ### Environment variables
