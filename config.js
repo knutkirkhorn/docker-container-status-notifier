@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 export default {
-    discordWebhookUrl: process.env.DISCORD_WEBHOOK_URL || '',
-    discordWebhookId: process.env.DISCORD_WEBHOOK_ID || '',
-    discordWebhookToken: process.env.DISCORD_WEBHOOK_TOKEN || ''
+	discordWebhookUrl: process.env.DISCORD_WEBHOOK_URL || '',
+	discordWebhookId: process.env.DISCORD_WEBHOOK_ID || '',
+	discordWebhookToken: process.env.DISCORD_WEBHOOK_TOKEN || ''
 };
